@@ -1,0 +1,186 @@
+html {
+
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 80ch;
+    padding: 1rem;
+    line-height: 1.5;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    margin: 1rem 0;
+    font-size: 2.5rem;
+}
+
+
+
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+
+
+/* nav styles */
+.hamburger {
+    padding-right: 20px;
+    cursor: pointer;
+
+    position: absolute;
+    top: 1rem;
+
+    & .line {
+        display: block;
+        width: 40px;
+        height: 5px;
+        margin-bottom: 10px;
+        background-color: #000;
+    }
+}
+
+
+
+.nav-links {
+    width: 100%;
+    display: none;
+    font-size: 1rem;
+
+
+    & a {
+        text-align: center;
+        text-decoration: none;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin: 5px;
+    }
+
+    & a:hover {
+        border-bottom: 1px solid #000;
+    }
+
+
+}
+
+.expanded {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+@media screen and (min-width: 636px) {
+    .nav-links {
+        color: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+
+
+
+        & a {
+            margin: 0 0.5rem;
+            font-size: 1rem;
+            text-decoration: none;
+            color: #000;
+        }
+
+
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+}
+
+html.dark {
+    background-color: #373737;
+    color: #fff;
+
+    & .nav-links a {
+        color: #fff;
+    }
+
+    & .nav-links a:hover {
+        border-bottom: 1px solid #fff;
+    }
+
+    & footer a {
+        color: #fff;
+        border: #fff solid 2px;
+    }
+
+    & footer a:hover {
+        background-color: #fff;
+        color: #000;
+    }
+
+    & .horizontal,
+    .logo {
+        color: #fff;
+    }
+
+    & .line {
+        background-color: #fff;
+    }
+
+}
+
+footer {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 2rem;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    & a {
+        font-size: 1.4rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        color: #000;
+        text-align: center;
+        border: 2px solid #373737;
+        border-radius: 50%;
+    }
+
+    & a svg {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    & a:hover {
+        background-color: #373737;
+        color: white;
+    }
+}
+
+.horizontal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+
+}
+
+#themeName {
+    font-size: 0.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
