@@ -2,22 +2,28 @@
 import MainLayout from "../layout/MainLayout.astro";
 ---
 
-<MainLayout title="About me" >
-<h1>About Me</h1>
-<p>Welcome to my portfolio! Here you will find information about my projects, skills, and experience.</p>
+<MainLayout title="About me">
+  <h1>About Me</h1>
+  <p>
+    Welcome to my portfolio! Here you will find information about my projects,
+    skills, and experience.
+  </p>
   <h2>Skills</h2>
   <ul>
     <li>
       <strong>React:</strong> A JavaScript library for building user interfaces.
-      <pre><code>import React from 'react';</code></pre>
+      <pre><code>import React from 'react';
+const HelloWorld = () => &lt;h1&gt;Hello, World!&lt;/h1&gt;;</code></pre>
     </li>
     <li>
-      <strong>JavaScript:</strong> A versatile programming language used for web development.
+      <strong>JavaScript:</strong> A versatile programming language used for web
+      development.
       <pre><code>const greet = () => console.log('Hello, world!');</code></pre>
     </li>
     <li>
-      <strong>CSS:</strong> A stylesheet language used to describe the presentation of a document written in HTML.
-      <pre><code>body { background-color: lightblue; }</code></pre>
+      <strong>CSS:</strong> A stylesheet language used to describe the presentation
+      of a document written in HTML.
+      <pre><code>body {'{'} background-color: lightblue; {'}'}</code></pre>
     </li>
     <li>
       <strong>Tailwind:</strong> A utility-first CSS framework for rapid UI development.
@@ -25,7 +31,7 @@ import MainLayout from "../layout/MainLayout.astro";
     </li>
     <li>
       <strong>MongoDB:</strong> A NoSQL database program that uses JSON-like documents.
-      <pre><code>db.collection('users').find({ name: 'John' });</code></pre>
+      <pre><code>{`db.collection('users').find({ username: 'John' });`}</code></pre>
     </li>
     <li>
       <strong>MySQL:</strong> An open-source relational database management system.
@@ -33,8 +39,7 @@ import MainLayout from "../layout/MainLayout.astro";
     </li>
     <li>
       <strong>JSON:</strong> A lightweight data-interchange format.
-      <pre><code>{ "name": "John", "age": 30 }</code></pre>
+      <pre><code>{`{ "name": "John", "age": 30 }`}</code></pre>
     </li>
   </ul>
 </MainLayout>
-
