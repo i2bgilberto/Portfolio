@@ -1,11 +1,231 @@
----
-import Hamburger from "./Hamburger.astro";
----
+<nav class="bg-white shadow-md">
+  <!-- Desktop Navigation -->
+  <div
+    class="hidden md:flex items-center justify-center max-w-7xl mx-auto px-4 h-20 relative"
+  >
+    <!-- Logo (Center) -->
+    <div class="logo-animation absolute z-10">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="80"
+        viewBox="0 0 324 215"
+        class="text-blue-900"
+      >
+        <path
+          fill="currentColor"
+          d="M243.51,4.58l-32.9-0.67c0,0-42.81,126.8-62.63,182.45l-51.97-64.27c41.94-15.25,41.94-57.19,41.94-57.19
+                  c5.72-53.38-54.19-60.32-54.19-60.32H8.27l26.66,23.74l43.93,0.95c32.41,2.49,30.63,35.59,30.63,35.59
+                  c0.13,43.8-43.98,41.93-43.98,41.93v21.02l67.22,83.88h5.72h30l58.27-177.67l62.02,177.67H315L243.51,4.58z"
+        ></path>
+      </svg>
+    </div>
 
-<Hamburger />
-<div class="nav-links">
-  <a href="/">Home</a>
-  <a href="https://i2b.dev/about">About me</a>
-  <a href="https://blog.i2b.dev">Blog</a>
-  <a href="https://blog.i2b.dev/tags">Topics</a>
-</div>
+    <!-- Navigation Items - Centered and Closer to Logo -->
+    <div class="flex justify-center w-full">
+      <!-- Left Nav Items -->
+      <div class="flex space-x-4 mr-24">
+        <a href="/" class="item-nav">HOME</a>
+        <a href="/about" class="item-nav">ABOUT ME</a>
+      </div>
+
+      <!-- Right Nav Items -->
+      <div class="flex space-x-4 ml-24">
+        <a href="//blog.i2b.dev" class="item-nav">Blog</a>
+        <a href="/contact" class="item-nav">Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Navigation -->
+  <div class="flex md:hidden items-center justify-between px-4 h-16">
+    <!-- Mobile Logo -->
+    <div class="logo-animation">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="36"
+        height="24"
+        viewBox="0 0 324 215"
+        class="text-blue-600"
+      >
+        <path
+          fill="currentColor"
+          d="M243.51,4.58l-32.9-0.67c0,0-42.81,126.8-62.63,182.45l-51.97-64.27c41.94-15.25,41.94-57.19,41.94-57.19
+                  c5.72-53.38-54.19-60.32-54.19-60.32H8.27l26.66,23.74l43.93,0.95c32.41,2.49,30.63,35.59,30.63,35.59
+                  c0.13,43.8-43.98,41.93-43.98,41.93v21.02l67.22,83.88h5.72h30l58.27-177.67l62.02,177.67H315L243.51,4.58z"
+        ></path>
+      </svg>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button id="mobile-menu-button" class="text-gray-700 focus:outline-none">
+      <svg
+        class="w-6 h-6"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Menu Overlay -->
+  <div id="mobile-menu" class="hidden fixed inset-0 bg-blue-600 z-50">
+    <div class="flex flex-col items-center justify-center mt-12">
+      <!-- Close Button -->
+      <button id="close-menu-button" class="absolute top-4 right-4 text-white">
+        <svg
+          class="w-8 h-8"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+      <!-- Mobile Menu Logo -->
+      <div class="mb-4">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="100"
+          viewBox="0 0 324 215"
+          class="text-white"
+        >
+          <path
+            fill="currentColor"
+            d="M243.51,4.58l-32.9-0.67c0,0-42.81,126.8-62.63,182.45l-51.97-64.27c41.94-15.25,41.94-57.19,41.94-57.19
+                    c5.72-53.38-54.19-60.32-54.19-60.32H8.27l26.66,23.74l43.93,0.95c32.41,2.49,30.63,35.59,30.63,35.59
+                    c0.13,43.8-43.98,41.93-43.98,41.93v21.02l67.22,83.88h5.72h30l58.27-177.67l62.02,177.67H315L243.51,4.58z"
+          ></path>
+        </svg>
+      </div>
+      <div class="text-white mb-8 text-[10px] opacity-20">
+        01000101011110000110001101100101011011000110010101101110011000110110100101100001
+      </div>
+      <!-- Mobile Menu Items -->
+      <div class="flex flex-col items-center space-y-6">
+        <a href="/" class="mobile-menu-item item-mobile-nav">Home</a>
+        <a href="/about" class="mobile-menu-item item-mobile-nav">About Me</a>
+        <a href="//blog.i2b.dev" class="mobile-menu-item item-mobile-nav"
+          >Blog</a
+        >
+        <a href="/contact" class="mobile-menu-item item-mobile-nav">Contact</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<style>
+  @keyframes logoAnimation {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+    70% {
+      transform: scale(1.1);
+      opacity: 0.8;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  .logo-animation {
+    animation: logoAnimation 1s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .mobile-menu-item {
+    opacity: 0;
+  }
+
+  .mobile-menu-item-visible {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+
+  /* Ensure mobile menu is hidden at larger screens */
+  @media (min-width: 768px) {
+    #mobile-menu {
+      display: none !important;
+    }
+  }
+</style>
+
+<script>
+  const mobileMenuButton = document.getElementById(
+    "mobile-menu-button"
+  ) as HTMLElement;
+  const closeMenuButton = document.getElementById(
+    "close-menu-button"
+  ) as HTMLElement;
+  const mobileMenu = document.getElementById("mobile-menu") as HTMLElement;
+  const mobileMenuItems = document.querySelectorAll(
+    ".mobile-menu-item"
+  ) as NodeListOf<HTMLElement>;
+
+  // Function to check window width and hide mobile menu if needed
+  function checkWindowSize() {
+    if (window.innerWidth >= 768) {
+      // md breakpoint in Tailwind
+      mobileMenu.classList.add("hidden");
+      document.body.style.overflow = "";
+
+      // Reset animations
+      mobileMenuItems.forEach((item) => {
+        item.classList.remove("mobile-menu-item-visible");
+      });
+    }
+  }
+
+  // Listen for window resize events
+  window.addEventListener("resize", checkWindowSize);
+
+  // Initial check on page load
+  checkWindowSize();
+
+  mobileMenuButton.addEventListener("click", () => {
+    mobileMenu.classList.remove("hidden");
+    document.body.style.overflow = "hidden";
+
+    // Animate each menu item with delay
+    mobileMenuItems.forEach((item, index) => {
+      setTimeout(
+        () => {
+          item.classList.add("mobile-menu-item-visible");
+        },
+        100 + index * 100
+      ); // Staggered delay
+    });
+  });
+
+  closeMenuButton.addEventListener("click", () => {
+    mobileMenu.classList.add("hidden");
+    document.body.style.overflow = "";
+
+    // Reset animations
+    mobileMenuItems.forEach((item) => {
+      item.classList.remove("mobile-menu-item-visible");
+    });
+  });
+</script>
