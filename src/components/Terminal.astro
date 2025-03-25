@@ -1,0 +1,83 @@
+---
+
+---
+
+<style>
+  pre {
+    white-space: pre-wrap; /* Allows text wrapping on small screens */
+    word-wrap: break-word; /* Prevents overflow on narrow screens */
+    max-width: 100%; /* Ensures the pre block fits container width */
+    overflow-x: auto; /* Adds horizontal scroll if content is too wide */
+  }
+</style>
+<div class="w-full max-w-3xl mx-auto px-4 py-8">
+  <div
+    class="bg-gray-800 rounded-lg shadow-lg overflow-hidden border border-gray-700"
+  >
+    <div
+      class="flex items-center px-4 py-3 bg-gray-900 border-b border-gray-700"
+    >
+      <div class="flex space-x-2 mr-4">
+        <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+        <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
+        <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+      </div>
+      <span class="text-gray-400 text-sm">i2bDeveloper@localhost: ~</span>
+    </div>
+    <div class="p-4 flex flex-col sm:flex-row">
+      <div class="min-w-[320px] justify-center items-center w-full md:w-1/2">
+        <pre
+          class="text-green-400 font-mono text-sm h-auto">
+<span class="text-purple-400">const</span> <span class="text-blue-400">developerProfile</span> = {"{"}
+<span class="text-gray-400">name:</span> <span class="text-yellow-400">"Ramon Alcal&aacute;"</span>,
+<span class="text-gray-400">title:</span> <span class="text-yellow-400">"Full Stack Developer"</span>,
+<span class="text-gray-400">skills:</span> 
+[
+    <span class="text-yellow-400">"React"</span>, <span class="text-yellow-400">"Node.js"</span>,
+    <span class="text-yellow-400">"TypeScript"</span>,
+    <span class="text-yellow-400">"Tailwindcss"</span>,
+    Database ? <span class="text-yellow-400">"MongoDB"</span> : <span class="text-yellow-400">"MySQL"</span>,
+    <span class="text-yellow-400">"JSON"</span>
+],
+<span class="text-gray-400">experience:</span> <span class="text-blue-300">7</span> <span class="text-gray-400">+ years</span>
+{"}"};
+    </pre>
+      </div>
+      <div class="w-full md:w-1/2">
+        <div class="bg-white w-full rounded-sm h-full">
+          <div class="p-4 text-gray-800 text-xl">
+            <div
+              class="p-2 bg-blue-600 text-white font-bold rounded-md text-sm border-2 border-blue-950"
+            >
+              Developer @<b class="name" data-code="{developerProfile.name}"
+                >Ramon Alcala</b
+              >
+            </div>
+            <div class="mt-4 text-base p-2">
+              Hi, I'm <b class="name" data-code="{developerProfile.name}"
+                >Ramon Alcal&aacute;</b
+              >, a Full Stack Developer with over 7 years of experience in web
+              development.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <pre
+        class="text-green-400 font-mono text-sm">
+<span class="text-purple-400">const</span> <span class="text-blue-400">developerProfile</span> = {"{"}
+<span class="text-gray-400">name:</span> <span class="text-yellow-400">"Alex Rodriguez"</span>,
+<span class="text-gray-400">title:</span> <span class="text-yellow-400">"Full Stack Developer"</span>,
+<span class="text-gray-400">skills:</span> [
+        <span class="text-yellow-400">"React"</span>,
+        <span class="text-yellow-400">"Node.js"</span>,
+        <span class="text-yellow-400">"TypeScript"</span>
+        ],
+<span class="text-gray-400">experience:</span> <span class="text-blue-300">5</span> <span class="text-gray-400">+ years</span>
+{"}"};
+
+<span class="text-gray-500"># Ready to build amazing things!</span>
+    </pre> -->
+</div>
