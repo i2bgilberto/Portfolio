@@ -28,19 +28,17 @@
       <div class="min-w-[320px] justify-center items-center w-full md:w-1/2">
         <pre
           class="text-green-400 font-mono text-sm h-auto">
-<span class="text-purple-400">const</span> <span class="text-blue-400">developerProfile</span> = {"{"}
+<span class="text-purple-400">const</span> <span class="text-blue-400">devProfile</span> = {"{"}
 <span class="text-gray-400">name:</span> <span class="text-yellow-400">"Ramon Alcal&aacute;"</span>,
 <span class="text-gray-400">title:</span> <span class="text-yellow-400">"Full Stack Developer"</span>,
 <span class="text-gray-400">skills:</span> 
-[
+  [
     <span class="text-yellow-400">"React"</span>, <span class="text-yellow-400">"Node.js"</span>,
-    <span class="text-yellow-400">"TypeScript"</span>,
-    <span class="text-yellow-400">"Tailwindcss"</span>,
-    <span class="text-yellow-400">"MongoDB"</span>, 
-    <span class="text-yellow-400">"MySQL"</span>,
+    <span class="text-yellow-400">"TypeScript"</span>,<span class="text-yellow-400">"Tailwindcss"</span>,
+    <span class="text-yellow-400">"MongoDB"</span>, <span class="text-yellow-400">"MySQL"</span>,
     <span class="text-yellow-400">"JSON"</span>
-],
-<span class="text-gray-400">experience:</span> <span class="text-blue-300">7</span> <span class="text-gray-400">+ years</span>
+  ],
+
 {"}"};
     </pre>
       </div>
@@ -48,37 +46,56 @@
         <div class="bg-white w-full rounded-sm h-full">
           <div class="p-4 text-gray-800 text-xl">
             <div
+              class="p-2 bg-blue-600 mb-2 text-white font-bold rounded-md text-sm border-2 border-blue-950 flex items-center justify-between w-full"
+            >
+              <span class="mr-4">Developer mode</span>
+              <div class="flex items-center space-x-4">
+                <button
+                  id="dev"
+                  class="relative w-12 h-6 bg-gray-300 rounded-full transition-colors flex items-center p-1"
+                >
+                  <div
+                    class="w-5 h-5 bg-white rounded-full shadow-md transform transition-transform translate-x-0"
+                  >
+                  </div>
+                </button>
+              </div>
+            </div>
+
+            <div
               class="p-2 bg-blue-600 text-white font-bold rounded-md text-sm border-2 border-blue-950"
             >
-              Developer @<b class="name" data-code="{developerProfile.name}"
-                >Ramon Alcala</b
+              Developer @<b
+                class="name"
+                data-code="{devProfile.name}"
+                data-string="Ramon Alcalá">Ramon Alcal&aacute;</b
               >
             </div>
-            <div class="mt-4 text-base p-2">
-              Hi, I'm <b class="name" data-code="{developerProfile.name}"
-                >Ramon Alcal&aacute;</b
-              >, a Full Stack Developer with over 7 years of experience in web
-              development.
+            <div class="mt-2 text-base">
+              Hi, I'm <b
+                class="name text-xl md:text-2xl italic"
+                data-code="${devProfile.name}"
+                data-string="Ramon Alcalá">Ramon Alcal&aacute;</b
+              >, a <b
+                class="text-xl md:text-2xl italic"
+                data-code="${devProfile.title}"
+                data-string="Full Stack Developer">Full Stack Developer</b
+              >. My expertise spans popular frameworks and libraries like <b
+                class="text-xl md:text-2xl italic"
+                data-code="${devProfile.skills[0]}"
+                data-string="React">React</b
+              >
+              and <b
+                class="text-xl md:text-2xl italic"
+                data-code="${devProfile.skills[1]}"
+                data-string="Node.js">Node.js</b
+              >
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-
-  <!-- <pre
-        class="text-green-400 font-mono text-sm">
-<span class="text-purple-400">const</span> <span class="text-blue-400">developerProfile</span> = {"{"}
-<span class="text-gray-400">name:</span> <span class="text-yellow-400">"Alex Rodriguez"</span>,
-<span class="text-gray-400">title:</span> <span class="text-yellow-400">"Full Stack Developer"</span>,
-<span class="text-gray-400">skills:</span> [
-        <span class="text-yellow-400">"React"</span>,
-        <span class="text-yellow-400">"Node.js"</span>,
-        <span class="text-yellow-400">"TypeScript"</span>
-        ],
-<span class="text-gray-400">experience:</span> <span class="text-blue-300">5</span> <span class="text-gray-400">+ years</span>
-{"}"};
-
-<span class="text-gray-500"># Ready to build amazing things!</span>
-    </pre> -->
 </div>
+
+<script src="@/scripts/Terminal.js"></script>
