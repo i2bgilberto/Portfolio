@@ -2,46 +2,207 @@
 import MainLayout from "@/layout/MainLayout.astro";
 ---
 
+<style>
+  .emoji-icon {
+    font-size: 1.5rem; /* Equivalent to text-2xl in Tailwind */
+    line-height: 1; /* Adjust line height for better vertical alignment */
+    margin-right: 0.5rem; /* Equivalent to mr-2 in Tailwind */
+    display: inline-block; /* Ensure it behaves like an inline element with margin */
+  }
+
+  .traffic-light {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 8px;
+    display: inline-block;
+  }
+  .close-button {
+    background-color: #ff605c;
+  }
+  .minimize-button {
+    background-color: #ffbd44;
+  }
+  .maximize-button {
+    background-color: #00ca4e;
+  }
+</style>
 <MainLayout title="About me">
-  <div class="min-w-[320px] mx-auto w-4xl pt-10">
-    <h1>About Me</h1>
-    <p>
-      Welcome to my portfolio! Here you will find information about my projects,
-      skills, and experience.
-    </p>
-    <h2>Skills</h2>
-    <ul>
-      <li>
-        <strong>React:</strong> A JavaScript library for building user interfaces.
-        <pre><code>import React from 'react';
-const HelloWorld = () => &lt;h1&gt;Hello, World!&lt;/h1&gt;;</code></pre>
-      </li>
-      <li>
-        <strong>JavaScript:</strong> A versatile programming language used for web
-        development.
-        <pre><code>const greet = () => console.log('Hello, world!');</code></pre>
-      </li>
-      <li>
-        <strong>CSS:</strong> A stylesheet language used to describe the presentation
-        of a document written in HTML.
-        <pre><code>body {'{'} background-color: lightblue; {'}'}</code></pre>
-      </li>
-      <li>
-        <strong>Tailwind:</strong> A utility-first CSS framework for rapid UI development.
-        <pre><code>&lt;div className="bg-blue-500 text-white p-4"&gt;Hello, Tailwind!&lt;/div&gt;</code></pre>
-      </li>
-      <li>
-        <strong>MongoDB:</strong> A NoSQL database program that uses JSON-like documents.
-        <pre><code>{`db.collection('users').find({ username: 'John' });`}</code></pre>
-      </li>
-      <li>
-        <strong>MySQL:</strong> An open-source relational database management system.
-        <pre><code>SELECT * FROM users WHERE name = 'John';</code></pre>
-      </li>
-      <li>
-        <strong>JSON:</strong> A lightweight data-interchange format.
-        <pre><code>{`{ "name": "John", "age": 30 }`}</code></pre>
-      </li>
-    </ul>
+  <div
+    class="container mx-auto mt-10 bg-gray-800 shadow-2xl shadow-gray-400 rounded-xl max-w-2xl overflow-hidden"
+  >
+    <div class="flex items-center p-3 bg-gray-900 rounded-t-xl">
+      <div class="flex">
+        <span class="traffic-light close-button"></span>
+        <span class="traffic-light minimize-button"></span>
+        <span class="traffic-light maximize-button"></span>
+      </div>
+      <div class="flex-grow text-sm font-semibold text-gray-400">
+        i2bDeveloper@localhost: ~ About Me
+      </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="p-6 sm:p-8 md:p-10 lg:p-12">
+      <!-- Header Section -->
+      <header class="text-center mb-8">
+        <p class="text-xl sm:text-2xl text-gray-50">
+          Software Developer Full Stack!
+        </p>
+      </header>
+
+      <!-- Introduction Section -->
+      <section>
+        <p
+          class="text-lg text-gray-50 leading-relaxed text-center sm:text-left"
+        >
+          Hello! I am a passionate and dedicated software programmer with a
+          strong focus on building efficient, scalable, and user-friendly
+          applications. My journey in development has equipped me with a diverse
+          skill set, allowing me to tackle various challenges across the full
+          stack. I thrive on learning new technologies and solving complex
+          problems with clean and maintainable code.
+        </p>
+      </section>
+
+      <!-- Skills Section -->
+      <section>
+        <h2
+          class="text-2xl sm:text-3xl font-semibold text-gray-800 mb-6 text-center"
+        >
+          My Skills
+        </h2>
+
+        <!-- Front-end Skills Section -->
+        <h3
+          class="text-xl sm:text-2xl font-semibold text-blue-100 mb-4 ml-2 pb-2 border-b-2 border-blue-300"
+        >
+          Front-end Development
+        </h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+          <!-- React Skill Card -->
+          <div
+            class="flex items-center justify-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 transform hover:-translate-y-1"
+          >
+            <span class="emoji-icon">⚛️</span>
+            <p class="text-lg font-medium text-gray-800">React</p>
+          </div>
+          <!-- Tailwind CSS Skill Card -->
+          <div
+            class="flex items-center justify-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 transform hover:-translate-y-1"
+          >
+            <span class="emoji-icon">💨</span>
+            <p class="text-lg font-medium text-gray-800">Tailwind CSS</p>
+          </div>
+          <!-- JavaScript Skill Card -->
+          <div
+            class="flex items-center justify-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 transform hover:-translate-y-1"
+          >
+            <span class="emoji-icon">📜</span>
+            <p class="text-lg font-medium text-gray-800">JavaScript</p>
+          </div>
+          <!-- TypeScript Skill Card -->
+          <div
+            class="flex items-center justify-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 transform hover:-translate-y-1"
+          >
+            <span class="emoji-icon">📘</span>
+            <p class="text-lg font-medium text-gray-800">TypeScript</p>
+          </div>
+          <!-- HTML5 & CSS3 Skill Card -->
+          <div
+            class="flex items-center justify-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 transform hover:-translate-y-1"
+          >
+            <span class="emoji-icon">🌐</span>
+            <p class="text-lg font-medium text-gray-800">HTML5 & CSS3</p>
+          </div>
+          <!-- Webpack/Vite Skill Card -->
+          <div
+            class="flex items-center justify-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 transform hover:-translate-y-1"
+          >
+            <span class="emoji-icon">📦</span>
+            <p class="text-lg font-medium text-gray-800">Webpack/Vite</p>
+          </div>
+        </div>
+
+        <!-- Back-end Skills Section -->
+        <h3
+          class="text-xl sm:text-2xl font-semibold text-blue-100 mb-4 ml-2 pb-2 border-b-2 border-blue-300"
+        >
+          Back-end Development & Databases
+        </h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <!-- PHP Skill Card -->
+          <div
+            class="flex items-center justify-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 transform hover:-translate-y-1"
+          >
+            <span class="emoji-icon">🐘</span>
+            <p class="text-lg font-medium text-gray-800">PHP</p>
+          </div>
+          <!-- Express.js Skill Card -->
+          <div
+            class="flex items-center justify-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 transform hover:-translate-y-1"
+          >
+            <span class="emoji-icon">🚀</span>
+            <p class="text-lg font-medium text-gray-800">Express.js</p>
+          </div>
+          <!-- MongoDB Skill Card -->
+          <div
+            class="flex items-center justify-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 transform hover:-translate-y-1"
+          >
+            <span class="emoji-icon">🌿</span>
+            <p class="text-lg font-medium text-gray-800">MongoDB</p>
+          </div>
+          <!-- MySQL Skill Card -->
+          <div
+            class="flex items-center justify-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 transform hover:-translate-y-1"
+          >
+            <span class="emoji-icon">🐬</span>
+            <p class="text-lg font-medium text-gray-800">MySQL</p>
+          </div>
+          <!-- PostgreSQL Skill Card -->
+          <div
+            class="flex items-center justify-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 transform hover:-translate-y-1"
+          >
+            <span class="emoji-icon">🐘</span>
+            <p class="text-lg font-medium text-gray-800">PostgreSQL</p>
+          </div>
+          <!-- Node.js (Core) Skill Card -->
+          <div
+            class="flex items-center justify-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 transform hover:-translate-y-1"
+          >
+            <span class="emoji-icon">🟩</span>
+            <p class="text-lg font-medium text-gray-800">Node.js (Core)</p>
+          </div>
+          <!-- Java (Spring Boot) Skill Card -->
+          <div
+            class="flex items-center justify-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 transform hover:-translate-y-1"
+          >
+            <span class="emoji-icon">☕</span>
+            <p class="text-lg font-medium text-gray-800">Java (Spring Boot)</p>
+          </div>
+          <!-- AWS/GCP/Azure Skill Card -->
+          <div
+            class="flex items-center justify-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 transform hover:-translate-y-1"
+          >
+            <span class="emoji-icon">☁️</span>
+            <p class="text-lg font-medium text-gray-800">AWS/GCP/Azure</p>
+          </div>
+          <!-- RESTful API Design Skill Card -->
+          <div
+            class="flex items-center justify-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 transform hover:-translate-y-1"
+          >
+            <span class="emoji-icon">⚙️</span>
+            <p class="text-lg font-medium text-gray-800">RESTful API Design</p>
+          </div>
+          <!-- CI/CD Skill Card -->
+          <div
+            class="flex items-center justify-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 transform hover:-translate-y-1"
+          >
+            <span class="emoji-icon">🔄</span>
+            <p class="text-lg font-medium text-gray-800">CI/CD</p>
+          </div>
+        </div>
+      </section>
+    </div>
   </div>
 </MainLayout>
